@@ -54,8 +54,6 @@ export const pointInSphere = ({ position, radius }, point) => {
   }
 
   return diff.x * diff.x + diff.y * diff.y + diff.z * diff.z <= radius * radius
-    ? 1
-    : 0
 }
 
 export const pointInCircle = ({ position, radius }, point) => {
@@ -64,5 +62,5 @@ export const pointInCircle = ({ position, radius }, point) => {
     z: Math.abs(position.z - point.z),
   }
 
-  return diff.x * diff.x + diff.z * diff.z <= radius * radius ? 1 : 0
+  return diff.x * diff.x + diff.z * diff.z <= radius * radius
 }
